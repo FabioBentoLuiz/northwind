@@ -37,7 +37,7 @@ CREATE TABLE employees
   job_title VARCHAR(50) ,
   department VARCHAR(50) ,
   manager_id INT ,
-  phone VARCHAR(25) ,
+  phone VARCHAR(25),
   address1 VARCHAR(150),
   address2 VARCHAR(150),
   city VARCHAR(50) ,

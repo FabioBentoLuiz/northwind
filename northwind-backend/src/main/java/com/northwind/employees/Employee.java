@@ -23,7 +23,6 @@ public class Employee {
     private String avatar;
     private String jobTitle;
     private String department;
-    private int managerId;
     private String address1;
     private String address2;
     private String city;
