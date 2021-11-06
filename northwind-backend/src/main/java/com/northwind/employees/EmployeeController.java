@@ -3,6 +3,7 @@ package com.northwind.employees;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -13,8 +14,13 @@ public class EmployeeController {
         this.employeeService = employeeService;
     }
 
-    @GetMapping("/employee")
-    public List<Employee> index() {
+    @GetMapping("/employees")
+    public List<Employee> getEmployees() {
         return this.employeeService.getAll();
+    }
+
+    @GetMapping("/employee/{id}")
+    public Employee getEmployeeById(@PathVariable Long id) {
+        return this.employeeService.getEmployeeById(id);
     }
 }
